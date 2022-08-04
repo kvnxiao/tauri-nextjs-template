@@ -2,6 +2,10 @@
   "name": "tauri-nextjs-template",
   "version": "0.1.0",
   "private": true,
+  "author": {
+    "name": "Your Name Here",
+    "email": "your-email-here@example.com"
+  },
   "scripts": {
     "dev": "next dev",
     "start": "cross-env BROWSER=none next dev",
