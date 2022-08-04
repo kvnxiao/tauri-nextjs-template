@@ -56,10 +56,10 @@
     "windows": [
       {
         "fullscreen": false,
-        "height": 600,
         "resizable": true,
         "title": "Tauri NextJS App",
-        "width": 800
+        "width": 1280,
+        "height": 800
       }
     ]
   }
