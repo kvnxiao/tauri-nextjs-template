@@ -1,6 +1,6 @@
 # Tauri + Next.js Template
 
-![Tauri window screenshot](public/screenshot.png)
+![Tauri window screenshot](public/template_screenshot.png)
 
 This is a [Tauri](https://tauri.app/) project template using [Next.js](https://nextjs.org/),
 bootstrapped by combining [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app)
