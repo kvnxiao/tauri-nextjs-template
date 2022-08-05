@@ -14,6 +14,9 @@ manager.
 - TypeScript frontend using Next.js React framework
 - [TailwindCSS](https://tailwindcss.com/) as a utility-first atomic CSS framework
   - The example page in this template app has been updated to use only TailwindCSS
+  - While not included by default, consider using
+    [HeadlessUI components](https://headlessui.com/) for completely unstyled and fully
+    accessible UI components, which integrate nicely with TailwindCSS
 - Opinionated formatting and linting already setup and enabled
   - [ESLint](https://eslint.org/) + [Prettier](https://prettier.io/) for frontend,
     [clippy](https://github.com/rust-lang/rust-clippy) and
