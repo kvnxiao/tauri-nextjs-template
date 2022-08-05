@@ -29,7 +29,7 @@ To develop and run the frontend on a Tauri window:
 yarn tauri dev
 ```
 
-This will allow the Next.js frontend to be loaded into a Tauri webview window.
+This will load the Next.js frontend directly in a Tauri webview window.
 
 ### Source structure
 
