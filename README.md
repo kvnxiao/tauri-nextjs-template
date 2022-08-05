@@ -52,13 +52,15 @@ https://nextjs.org/docs/basic-features/pages#pre-rendering
 
 ### `next/image`
 
-The `next/image` component is an enhancement over the regular `<img>` HTML element with
-additional optimizations built in. However, because we are not deploying the frontend
-onto Vercel directly, some optimizations must be disabled to properly build and export
-the frontend via SSG. This will allow the image to be served as-is from source, without
-changes to its quality, size, or format. As such, the
+The [`next/image` component](https://nextjs.org/docs/basic-features/image-optimization)
+is an enhancement over the regular `<img>` HTML element with additional optimizations
+built in. However, because we are not deploying the frontend onto Vercel directly, some
+optimizations must be disabled to properly build and export the frontend via SSG.
+As such, the
 [`unoptimized` property](https://nextjs.org/docs/api-reference/next/image#unoptimized)
 is set to true for the `next/image` component in the `next.config.js` configuration.
+This will allow the image to be served as-is from source, without
+changes to its quality, size, or format.
 
 ## Learn More
 
