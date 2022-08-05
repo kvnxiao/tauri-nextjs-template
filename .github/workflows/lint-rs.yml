@@ -9,6 +9,7 @@ on:
   pull_request:
     paths-ignore:
       - "src/**"
+      - "README.md"
 
 jobs:
   build:

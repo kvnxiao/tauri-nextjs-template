@@ -9,6 +9,7 @@ on:
   pull_request:
     paths-ignore:
       - "src-tauri/**"
+      - "README.md"
 
 jobs:
   build:
