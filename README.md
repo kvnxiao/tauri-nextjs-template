@@ -9,6 +9,17 @@ and [`create tauri-app`](https://tauri.app/v1/guides/getting-started/setup).
 This template uses [`yarn`](https://classic.yarnpkg.com/) as the Node.js dependency
 manager.
 
+## Template Features
+
+- TypeScript frontend using Next.js React framework
+- [TailwindCSS](https://tailwindcss.com/) as a utility-first atomic CSS framework
+  - The example page in this template app has been updated to use only TailwindCSS
+- Opinionated formatting and linting already setup and enabled
+  - [ESLint](https://eslint.org/) + [Prettier](https://prettier.io/) for frontend,
+    [clippy](https://github.com/rust-lang/rust-clippy) and
+    [rustfmt](https://github.com/rust-lang/rustfmt) for Rust code
+- GitHub Actions to check code formatting and linting for both TypeScript and Rust
+
 ## Getting Started
 
 ### Running Next.js (browser) development server:
@@ -21,15 +32,16 @@ yarn dev
 
 This will start a local Next.js development server on `localhost:3000`
 
-### Running development server using Tauri window:
+### Running development server and use Tauri window:
 
-To develop and run the frontend on a Tauri window:
+To develop and run the frontend in a Tauri window:
 
 ```shell
 yarn tauri dev
 ```
 
-This will load the Next.js frontend directly in a Tauri webview window.
+This will load the Next.js frontend directly in a Tauri webview window, in addition to
+starting a development server on `localhost:3000`.
 
 ### Source structure
 
