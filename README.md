@@ -37,13 +37,38 @@ Next.js frontend source files are located in `src/` and Tauri Rust application s
 files are located in `src-tauri/`. Please consult the Next.js and Tauri documentation
 respectively for questions pertaining to either technology.
 
+## Caveats
+
+### Static Site Generation / Pre-rendering
+
+Next.js is a great React frontend framework which supports server-side rendering (SSR)
+as well as static site generation (SSG or pre-rendering). For the purposes of creating a
+Tauri frontend, Next.js may only be used for its SSG functionality, as a Node.js server
+is required for SSR.
+
+Using Next.js and SSG helps to provide a quick and performant single-page-application
+(SPA) frontend experience. More information regarding this can be found here:
+https://nextjs.org/docs/basic-features/pages#pre-rendering
+
+### `next/image`
+
+The `next/image` component is an enhancement over the regular `<img>` HTML element with
+additional optimizations built in. However, because we are not deploying the frontend
+onto Vercel directly, some optimizations must be disabled to properly build and export
+the frontend via SSG. This will allow the image to be served as-is from source, without
+changes to its quality, size, or format. As such, the
+[`unoptimized` property](https://nextjs.org/docs/api-reference/next/image#unoptimized)
+is set to true for the `next/image` component in the `next.config.js` configuration.
+
 ## Learn More
 
 To learn more about Next.js, take a look at the following resources:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
+- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and
+  API.
 - [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
 
 And to learn more about Tauri, take a look at the following resources:
 
-- [Tauri Documentation - Guides](https://tauri.app/v1/guides/) - learn about the Tauri toolkit
+- [Tauri Documentation - Guides](https://tauri.app/v1/guides/) - learn about the Tauri
+  toolkit.
