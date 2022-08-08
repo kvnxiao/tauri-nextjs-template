@@ -76,6 +76,14 @@ is set to true for the `next/image` component in the `next.config.js` configurat
 This will allow the image to be served as-is from source, without
 changes to its quality, size, or format.
 
+### error[E0554]: `#![feature]` may not be used on the stable release channel
+
+If you are getting this issue when trying to run `yarn tauri dev`, it may be that you
+have a newer version of a Rust dependency that uses an unstable feature.
+`yarn tauri build` should still work for production builds, but to get the dev command
+working, either downgrade the dependency or use Rust nightly via
+`rustup override set nightly`.
+
 ## Learn More
 
 To learn more about Next.js, take a look at the following resources:
