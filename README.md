@@ -58,8 +58,7 @@ respectively for questions pertaining to either technology.
 
 Next.js is a great React frontend framework which supports server-side rendering (SSR)
 as well as static site generation (SSG or pre-rendering). For the purposes of creating a
-Tauri frontend, Next.js may only be used for its SSG functionality, as a Node.js server
-is required for SSR.
+Tauri frontend, only SSG can be used since SSR requires an active Node.js server.
 
 Using Next.js and SSG helps to provide a quick and performant single-page-application
 (SPA) frontend experience. More information regarding this can be found here:
