@@ -1,10 +1,24 @@
+import { invoke } from "@tauri-apps/api/tauri"
 import type { NextPage } from "next"
 import Head from "next/head"
 import Image from "next/image"
+import { useState } from "react"
 
 import { Card } from "../components/Card"
+import { CardButton } from "../components/CardButton"
 
 const Home: NextPage = () => {
+  const [buttonDesc, setButtonDesc] = useState<string>(
+    "Waiting to be clicked. This calls 'on_button_clicked' from Rust.",
+  )
+  const onButtonClick = () => {
+    invoke<string>("on_button_clicked")
+      .then((value) => {
+        setButtonDesc(value)
+      })
+      .catch(() => setButtonDesc("Failed to invoke Rust command 'on_button_clicked'"))
+  }
+
   return (
     <div className="flex min-h-screen flex-col bg-white">
       <Head>
@@ -52,10 +66,10 @@ const Home: NextPage = () => {
             description="Discover and deploy boilerplate example Next.js projects."
           />
 
-          <Card
-            url="https://vercel.com/new?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            title="Deploy"
-            description="Instantly deploy your Next.js site to a public URL with Vercel."
+          <CardButton
+            onClick={onButtonClick}
+            title="Tauri Invoke"
+            description={buttonDesc}
           />
         </div>
       </main>
