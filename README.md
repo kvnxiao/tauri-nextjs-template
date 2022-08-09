@@ -128,9 +128,9 @@ const loadBaz = (): Promise<string> => {
 //
 // We apply the idea of dependency injection to use a supplied invoke function as a
 // function argument, rather than directly referencing the Tauri invoke function.
-// Hence, don't import invoke globally in this file; remove the next commented line:
+// Hence, don't import invoke globally in this file.
 //
-// import { invoke } from "@tauri-apps/api/tauri"
+// import { invoke } from "@tauri-apps/api/tauri"  <-- remove this!
 //
 
 import { InvokeArgs } from "@tauri-apps/api/tauri"
