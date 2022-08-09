@@ -84,6 +84,76 @@ have a newer version of a Rust dependency that uses an unstable feature.
 working, either downgrade the dependency or use Rust nightly via
 `rustup override set nightly`.
 
+### ReferenceError: navigator is not defined
+
+If you are using Tauri's `invoke` function or any OS related Tauri function from within
+JavaScript, you may encounter this error when importing the function in a global,
+non-browser context. This is due to the nature of Next.js' dev server effectively
+running a Node.js server for SSR and hot module replacement (HMR), and Node.js does not
+have a notion of `window` or `navigator`.
+
+**Solution:** Make sure that you are calling these functions within the browser context,
+e.g. within a React component inside a `useEffect` hook when the DOM actually exists by
+then. If you are trying to use a Tauri function in a generalized utility source file,
+a workaround is to use dependency injection for the function itself to delay the actual
+importing of the real function (see example below for more info).
+
+Example using Tauri's `invoke` function:
+
+`src/invoke_functions.ts` (problematic)
+
+```typescript
+// Generalized file containing all the invoke functions we need to fetch data from Rust
+import { invoke } from "@tauri-apps/api/tauri"
+
+const loadFoo = (): Promise<string> => {
+  return invoke<string>("invoke_handler_foo")
+}
+
+const loadBar = (): Promise<string> => {
+  return invoke<string>("invoke_handler_bar")
+}
+
+const loadBaz = (): Promise<string> => {
+  return invoke<string>("invoke_handler_baz")
+}
+
+// and so on ...
+```
+
+`src/invoke_functions.ts` (fixed)
+
+```typescript
+// Generalized file containing all the invoke functions we need to fetch data from Rust
+//
+// We apply the idea of dependency injection to use a supplied invoke function as a
+// function argument, rather than directly referencing the Tauri invoke function.
+// Hence, don't import invoke globally in this file; remove the next commented line:
+//
+// import { invoke } from "@tauri-apps/api/tauri"
+//
+
+import { InvokeArgs } from "@tauri-apps/api/tauri"
+type InvokeFunction = <T>(cmd: string, args?: InvokeArgs | undefined) => Promise<T>
+
+const loadFoo = (invoke: InvokeFunction): Promise<string> => {
+  return invoke<string>("invoke_handler_foo")
+}
+
+const loadBar = (invoke: InvokeFunction): Promise<string> => {
+  return invoke<string>("invoke_handler_bar")
+}
+
+const loadBaz = (invoke: InvokeFunction): Promise<string> => {
+  return invoke<string>("invoke_handler_baz")
+}
+
+// and so on ...
+```
+
+Then, when using `loadFoo`/`loadBar`/`loadBaz` within your React components, pass
+`invoke` into the function as the `InvokeFunction` argument.
+
 ## Learn More
 
 To learn more about Next.js, take a look at the following resources:
