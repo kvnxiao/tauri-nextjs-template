@@ -92,15 +92,17 @@ non-browser context. This is due to the nature of Next.js' dev server effectivel
 running a Node.js server for SSR and hot module replacement (HMR), and Node.js does not
 have a notion of `window` or `navigator`.
 
-**Solution:** Make sure that you are calling these functions within the browser context,
-e.g. within a React component inside a `useEffect` hook when the DOM actually exists by
-then. If you are trying to use a Tauri function in a generalized utility source file,
-a workaround is to use dependency injection for the function itself to delay the actual
-importing of the real function (see example below for more info).
+#### Solution 1 - Dependency Injection (may not always work)
+
+Make sure that you are calling these functions within the browser context, e.g. within a
+React component inside a `useEffect` hook when the DOM actually exists by then. If you
+are trying to use a Tauri function in a generalized utility source file, a workaround is
+to use dependency injection for the function itself to delay the actual importing of the
+real function (see example below for more info).
 
 Example using Tauri's `invoke` function:
 
-`src/invoke_functions.ts` (problematic)
+`src/lib/some_tauri_functions.ts` (problematic)
 
 ```typescript
 // Generalized file containing all the invoke functions we need to fetch data from Rust
@@ -121,7 +123,7 @@ const loadBaz = (): Promise<string> => {
 // and so on ...
 ```
 
-`src/invoke_functions.ts` (fixed)
+`src/lib/some_tauri_functions.ts` (fixed)
 
 ```typescript
 // Generalized file containing all the invoke functions we need to fetch data from Rust
@@ -151,8 +153,43 @@ const loadBaz = (invoke: InvokeFunction): Promise<string> => {
 // and so on ...
 ```
 
-Then, when using `loadFoo`/`loadBar`/`loadBaz` within your React components, pass
-`invoke` into the function as the `InvokeFunction` argument.
+Then, when using `loadFoo`/`loadBar`/`loadBaz` within your React components, import the
+invoke function from `@tauri-apps/api` and pass `invoke` into the loadXXX function as
+the `InvokeFunction` argument. This should allow the actual Tauri API to be bundled
+only within the context of a React component, so it should not be loaded by Next.js upon
+initial startup until the browser has finished loading the page.
+
+#### Solution 2: Wrap Tauri API behind dynamic `import()`
+
+Since the Tauri API needs to read from the browser's `window` and `navigator` object,
+this data does not exist in a Node.js and hence SSR environment. One can create an
+exported function that wraps the Tauri API behind a dynamic runtime `import()` call.
+
+Example: create a `src/lib/tauri.ts` to re-export `invoke`
+
+```typescript
+import type { InvokeArgs } from "@tauri-apps/api/tauri"
+
+const isNode = (): boolean =>
+  Object.prototype.toString.call(typeof process !== "undefined" ? process : 0) ===
+  "[object process]"
+
+export async function invoke<T>(
+  cmd: string,
+  args?: InvokeArgs | undefined,
+): Promise<T> {
+  if (isNode()) {
+    // This shouldn't ever happen when React fully loads
+    return Promise.resolve(undefined as unknown as T)
+  }
+  const tauriAppsApi = await import("@tauri-apps/api")
+  const tauriInvoke = tauriAppsApi.invoke
+  return tauriInvoke(cmd, args)
+}
+```
+
+Then, instead of importing `import { invoke } from "@tauri-apps/api/tauri"`, use invoke
+from `import { invoke } from "@/lib/tauri"`.
 
 ## Learn More
 
