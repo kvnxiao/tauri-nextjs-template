@@ -4,8 +4,8 @@ import Head from "next/head"
 import Image from "next/image"
 import { useState } from "react"
 
-import { Card } from "../components/Card"
-import { CardButton } from "../components/CardButton"
+import { Card } from "@/components/Card"
+import { CardButton } from "@/components/CardButton"
 
 const Home: NextPage = () => {
   const [buttonDesc, setButtonDesc] = useState<string>(
