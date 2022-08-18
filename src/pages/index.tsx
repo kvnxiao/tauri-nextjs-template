@@ -6,6 +6,7 @@ import { useState } from "react"
 
 import { Card } from "@/components/Card"
 import { CardButton } from "@/components/CardButton"
+import { useGlobalShortcut } from "@/hooks/tauri/shortcuts"
 
 const Home: NextPage = () => {
   const [buttonDesc, setButtonDesc] = useState<string>(
@@ -18,6 +19,10 @@ const Home: NextPage = () => {
       })
       .catch(() => setButtonDesc("Failed to invoke Rust command 'on_button_clicked'"))
   }
+
+  useGlobalShortcut("CommandOrControl+P", () => {
+    console.log("Ctrl+P was pressed!")
+  })
 
   return (
     <div className="flex min-h-screen flex-col bg-white">
