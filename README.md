@@ -25,26 +25,28 @@ manager.
 
 ## Getting Started
 
-### Running Next.js (browser) development server:
+### Running development server and use Tauri window
 
-To run a normal browser-based development server for the Next.js frontend:
+To develop and run the frontend in a Tauri window:
 
 ```shell
 yarn dev
 ```
 
-This will start a local Next.js development server on `localhost:3000`
-
-### Running development server and use Tauri window:
-
-To develop and run the frontend in a Tauri window:
-
-```shell
-yarn tauri dev
-```
-
 This will load the Next.js frontend directly in a Tauri webview window, in addition to
 starting a development server on `localhost:3000`.
+
+### Building for release
+
+To export the Next.js frontend via SSG and build the Tauri application for release:
+
+```shell
+yarn build
+```
+
+Please remember to change the bundle identifier in
+`tauri.conf.json > tauri > bundle > identifier`, as the default value will yield an
+error that prevents you from building the application for release.
 
 ### Source structure
 

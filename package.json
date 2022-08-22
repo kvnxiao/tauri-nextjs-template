@@ -7,10 +7,11 @@
     "email": "your-email-here@example.com"
   },
   "scripts": {
-    "dev": "next dev",
-    "start": "cross-env BROWSER=none next dev",
-    "build": "next build && next export",
+    "next-start": "cross-env BROWSER=none next dev",
+    "next-build": "next build && next export",
     "tauri": "tauri",
+    "build": "tauri build",
+    "dev": "tauri dev",
     "lint": "next lint",
     "prepare": "husky install"
   },
