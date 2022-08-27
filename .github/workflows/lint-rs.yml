@@ -9,6 +9,8 @@ on:
   pull_request:
     paths-ignore:
       - "src/**"
+      - "package.json"
+      - "yarn.lock"
       - "README.md"
 
 jobs:
