@@ -4,10 +4,10 @@ updates:
   - package-ecosystem: "npm"
     directory: "/"
     schedule:
-      interval: "daily"
+      interval: "monthly"
 
   # Enable version updates for rust
   - package-ecosystem: "cargo"
     directory: "/src-tauri"
     schedule:
-      interval: "daily"
+      interval: "monthly"
