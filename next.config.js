@@ -3,7 +3,6 @@ const nextConfig = {
   reactStrictMode: true,
   swcMinify: true,
   images: {
-    allowFutureImage: true,
     unoptimized: true,
   },
 };
