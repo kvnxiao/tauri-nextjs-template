@@ -12,10 +12,7 @@ fn on_button_clicked() -> String {
         .duration_since(UNIX_EPOCH)
         .expect("Time went backwards")
         .as_millis();
-    format!(
-        "on_button_clicked called from Rust! (timestamp: {}ms)",
-        since_the_epoch
-    )
+    format!("on_button_clicked called from Rust! (timestamp: {since_the_epoch}ms)")
 }
 
 fn main() {
