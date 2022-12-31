@@ -1,4 +1,4 @@
-# Installs Node.js dependencies and Yarn, and checks formatting + linting
+# Installs Node.js dependencies and pnpm, and checks formatting + linting
 
 name: Lint Node.js
 
@@ -28,14 +28,19 @@ jobs:
       - name: Checkout repository code
         uses: actions/checkout@v3
 
+      - name: Set up pnpm package manager
+        uses: pnpm/action-setup@v2
+        with:
+          version: latest
+
       - name: Set up Node.js LTS v16
         uses: actions/setup-node@v3
         with:
           node-version: 16
-          cache: "yarn"
+          cache: "pnpm"
 
-      - name: Install dependencies from yarn.lock
-        run: yarn install --frozen-lockfile
+      - name: Install dependencies from lockfile
+        run: pnpm install --frozen-lockfile
 
       - name: Run lint step
-        run: yarn lint
+        run: pnpm lint

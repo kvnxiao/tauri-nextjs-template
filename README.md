@@ -6,7 +6,7 @@ This is a [Tauri](https://tauri.app/) project template using [Next.js](https://n
 bootstrapped by combining [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app)
 and [`create tauri-app`](https://tauri.app/v1/guides/getting-started/setup).
 
-This template uses [`yarn`](https://classic.yarnpkg.com/) as the Node.js dependency
+This template uses [`pnpm`](https://pnpm.io/) as the Node.js dependency
 manager.
 
 ## Template Features
@@ -27,10 +27,16 @@ manager.
 
 ### Running development server and use Tauri window
 
+After cloning for the first time, set up git pre-commit hooks:
+
+```shell
+pnpm prepare
+```
+
 To develop and run the frontend in a Tauri window:
 
 ```shell
-yarn dev
+pnpm dev
 ```
 
 This will load the Next.js frontend directly in a Tauri webview window, in addition to
@@ -41,7 +47,7 @@ starting a development server on `localhost:3000`.
 To export the Next.js frontend via SSG and build the Tauri application for release:
 
 ```shell
-yarn build
+pnpm build
 ```
 
 Please remember to change the bundle identifier in
@@ -80,9 +86,9 @@ changes to its quality, size, or format.
 
 ### error[E0554]: `#![feature]` may not be used on the stable release channel
 
-If you are getting this issue when trying to run `yarn tauri dev`, it may be that you
+If you are getting this issue when trying to run `pnpm tauri dev`, it may be that you
 have a newer version of a Rust dependency that uses an unstable feature.
-`yarn tauri build` should still work for production builds, but to get the dev command
+`pnpm tauri build` should still work for production builds, but to get the dev command
 working, either downgrade the dependency or use Rust nightly via
 `rustup override set nightly`.
 
