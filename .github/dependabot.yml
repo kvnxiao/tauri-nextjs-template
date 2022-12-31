@@ -1,6 +1,6 @@
 version: 2
 updates:
-  # Enable version updates for yarn/npm
+  # Enable version updates for Node.js dependencies
   - package-ecosystem: "npm"
     directory: "/"
     schedule:
