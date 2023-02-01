@@ -22,7 +22,7 @@ specifiers:
   eslint-config-next: ^13.1.1
   eslint-config-prettier: ^8.5.0
   eslint-plugin-prettier: ^4.2.1
-  eslint-plugin-simple-import-sort: ^8.0.0
+  eslint-plugin-simple-import-sort: ^10.0.0
   husky: ^8.0.2
   lint-staged: ^13.1.0
   next: ^13.1.1
@@ -63,7 +63,7 @@ devDependencies:
   eslint-config-next: 13.1.1_lzzuuodtsqwxnvqeq4g4likcqa
   eslint-config-prettier: 8.5.0_eslint@8.30.0
   eslint-plugin-prettier: 4.2.1_kl4pe43v5b43npmso5hoplpbyi
-  eslint-plugin-simple-import-sort: 8.0.0_eslint@8.30.0
+  eslint-plugin-simple-import-sort: 10.0.0_eslint@8.30.0
   husky: 8.0.2
   lint-staged: 13.1.0
   postcss: 8.4.20
@@ -1730,8 +1730,8 @@ packages:
       string.prototype.matchall: 4.0.8
     dev: true
 
-  /eslint-plugin-simple-import-sort/8.0.0_eslint@8.30.0:
-    resolution: {integrity: sha512-bXgJQ+lqhtQBCuWY/FUWdB27j4+lqcvXv5rUARkzbeWLwea+S5eBZEQrhnO+WgX3ZoJHVj0cn943iyXwByHHQw==}
+  /eslint-plugin-simple-import-sort/10.0.0_eslint@8.30.0:
+    resolution: {integrity: sha512-AeTvO9UCMSNzIHRkg8S6c3RPy5YEwKWSQPx3DYghLedo2ZQxowPFLGDN1AZ2evfg6r6mjBSZSLxLFsWSu3acsw==}
     peerDependencies:
       eslint: '>=5.0.0'
     dependencies:
