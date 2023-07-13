@@ -17,7 +17,9 @@ const Home: NextPage = () => {
       .then((value) => {
         setButtonDesc(value)
       })
-      .catch(() => setButtonDesc("Failed to invoke Rust command 'on_button_clicked'"))
+      .catch(() => {
+        setButtonDesc("Failed to invoke Rust command 'on_button_clicked'")
+      })
   }
 
   useGlobalShortcut("CommandOrControl+P", () => {
