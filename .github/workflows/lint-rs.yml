@@ -5,7 +5,7 @@ name: Lint Rust
 on:
   push:
     branches:
-      - master
+      - main
   pull_request:
     paths-ignore:
       - "src/**"
