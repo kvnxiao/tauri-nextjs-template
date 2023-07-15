@@ -45,7 +45,7 @@
     "eslint-plugin-simple-import-sort": "^10.0.0",
     "husky": "^8.0.3",
     "lint-staged": "^13.2.3",
-    "postcss": "^8.4.25",
+    "postcss": "^8.4.26",
     "postcss-import": "^15.1.0",
     "prettier": "^3.0.0",
     "prettier-plugin-tailwindcss": "^0.4.0",
