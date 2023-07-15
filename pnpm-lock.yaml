@@ -23,8 +23,8 @@ dependencies:
 
 devDependencies:
   '@prettier/plugin-xml':
-    specifier: ^3.1.0
-    version: 3.1.0
+    specifier: ^3.1.1
+    version: 3.1.1(prettier@3.0.0)
   '@tauri-apps/cli':
     specifier: ^1.4.0
     version: 1.4.0
@@ -395,8 +395,10 @@ packages:
       tslib: 2.6.0
     dev: true
 
-  /@prettier/plugin-xml@3.1.0:
-    resolution: {integrity: sha512-0RskvTvwQzTOq3nKXjHT7mnTUs/b8xh1iONC0lEYyWRtSHseE2N8pEvdYSy/7dIKEA34aPHKGrSAmKjK2xPAtQ==}
+  /@prettier/plugin-xml@3.1.1(prettier@3.0.0):
+    resolution: {integrity: sha512-kf20whg987pD/GWz0s1H2iA2170NnyP7chfmSkY55Dhs8wZwWxVxPItfWsfJo1FVMvTuNUPZY/hTqqHrzxb6Pg==}
+    peerDependencies:
+      prettier: ^3.0.0
     dependencies:
       '@xml-tools/parser': 1.0.11
       prettier: 3.0.0
