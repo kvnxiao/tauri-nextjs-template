@@ -2,7 +2,7 @@ import { invoke } from "@tauri-apps/api/tauri"
 import type { NextPage } from "next"
 import Head from "next/head"
 import Image from "next/image"
-import { useState } from "react"
+import { useCallback, useState } from "react"
 
 import { Card } from "@/components/Card"
 import { CardButton } from "@/components/CardButton"
@@ -22,9 +22,10 @@ const Home: NextPage = () => {
       })
   }
 
-  useGlobalShortcut("CommandOrControl+P", () => {
+  const shortcutHandler = useCallback(() => {
     console.log("Ctrl+P was pressed!")
-  })
+  }, [])
+  useGlobalShortcut("CommandOrControl+P", shortcutHandler)
 
   return (
     <div className="flex min-h-screen flex-col bg-white">
