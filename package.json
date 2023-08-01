@@ -18,7 +18,7 @@
   "dependencies": {
     "@tauri-apps/api": "^1.4.0",
     "clsx": "^2.0.0",
-    "next": "^13.4.10",
+    "next": "^13.4.12",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   },
