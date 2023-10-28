@@ -8,7 +8,7 @@
   },
   "scripts": {
     "next-start": "cross-env BROWSER=none next dev",
-    "next-build": "next build && next export",
+    "next-build": "next build",
     "tauri": "tauri",
     "build": "tauri build",
     "dev": "tauri dev",
