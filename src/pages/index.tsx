@@ -1,12 +1,11 @@
+import { Card } from "@/components/Card"
+import { CardButton } from "@/components/CardButton"
+import { useGlobalShortcut } from "@/hooks/tauri/shortcuts"
 import { invoke } from "@tauri-apps/api/tauri"
 import type { NextPage } from "next"
 import Head from "next/head"
 import Image from "next/image"
 import { useCallback, useState } from "react"
-
-import { Card } from "@/components/Card"
-import { CardButton } from "@/components/CardButton"
-import { useGlobalShortcut } from "@/hooks/tauri/shortcuts"
 
 const Home: NextPage = () => {
   const [buttonDesc, setButtonDesc] = useState<string>(

@@ -1,7 +1,7 @@
 import {
+  ShortcutHandler,
   isRegistered,
   register,
-  ShortcutHandler,
   unregister,
 } from "@tauri-apps/api/globalShortcut"
 import { useEffect } from "react"

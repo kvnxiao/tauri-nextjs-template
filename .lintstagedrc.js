@@ -7,5 +7,7 @@ const buildEslintCommand = (filenames) =>
 
 module.exports = {
   "src/**/*.{js,jsx,ts,tsx}": [buildEslintCommand],
-  "*.{json,html,css,scss,xml,svg,md}": ["prettier --write"],
+  "*.{js,ts,cjs,mjs,d.cts,d.mts,jsx,tsx,json,jsonc}": [
+    "biome check --apply --no-errors-on-unmatched", // Format, sort imports, lint, and apply safe fixes
+  ],
 }
