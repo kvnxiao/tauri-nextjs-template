@@ -19,7 +19,9 @@ manager.
     [HeadlessUI components](https://headlessui.com/) for completely unstyled and fully
     accessible UI components, which integrate nicely with TailwindCSS
 - Opinionated formatting and linting already setup and enabled
-  - [ESLint](https://eslint.org/) + [Prettier](https://prettier.io/) for frontend,
+  - [ESLint](https://eslint.org/) for pure React + TypeScript linting, and
+    [Biome](https://biomejs.dev/) for a combination of fast formatting, linting, and
+    import sorting of JavaScript and TypeScript code
     [clippy](https://github.com/rust-lang/rust-clippy) and
     [rustfmt](https://github.com/rust-lang/rustfmt) for Rust code
 - GitHub Actions to check code formatting and linting for both TypeScript and Rust
