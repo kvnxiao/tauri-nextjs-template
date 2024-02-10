@@ -12,7 +12,7 @@
     "tauri": "tauri",
     "build": "tauri build",
     "dev": "tauri dev",
-    "lint": "next lint",
+    "lint": "next lint && biome check src/",
     "prepare": "husky install"
   },
   "dependencies": {
