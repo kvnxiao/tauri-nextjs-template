@@ -3,14 +3,13 @@
     "eslint:recommended",
     "plugin:@typescript-eslint/strict-type-checked",
     "plugin:@typescript-eslint/stylistic-type-checked",
-    "next/core-web-vitals",
-    "prettier"
+    "next/core-web-vitals"
   ],
   "parser": "@typescript-eslint/parser",
   "parserOptions": {
     "project": ["./tsconfig.json"]
   },
-  "plugins": ["@typescript-eslint", "simple-import-sort", "prettier"],
+  "plugins": ["@typescript-eslint"],
   "rules": {
     "eqeqeq": "error",
     "no-else-return": "error",
@@ -25,9 +24,6 @@
     "prefer-spread": "error",
     "prefer-template": "error",
     "radix": ["error", "always"],
-    "simple-import-sort/imports": "error",
-    "simple-import-sort/exports": "error",
-    "prettier/prettier": "error",
     "react-hooks/exhaustive-deps": "error"
   }
 }
