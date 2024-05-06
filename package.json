@@ -13,7 +13,7 @@
     "build": "tauri build",
     "dev": "tauri dev",
     "lint": "next lint && biome check src/",
-    "prepare": "husky install"
+    "prepare": "husky"
   },
   "dependencies": {
     "@tauri-apps/api": "^1.5.3",
