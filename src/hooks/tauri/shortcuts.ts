@@ -1,5 +1,5 @@
 import {
-  ShortcutHandler,
+  type ShortcutHandler,
   isRegistered,
   register,
   unregister,
@@ -28,7 +28,7 @@ export const useGlobalShortcut = (
       }
     }
 
-    void registerShortcut().catch((err) => {
+    void registerShortcut().catch((err: unknown) => {
       console.error(`Failed to register global shortcut '${shortcut}'`, err)
     })
 
