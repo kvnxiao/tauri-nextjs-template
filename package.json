@@ -38,7 +38,7 @@
     "autoprefixer": "^10.4.19",
     "cross-env": "^7.0.3",
     "cssnano": "^7.0.2",
-    "eslint": "^8.57.0",
+    "eslint": "^9.5.0",
     "eslint-config-next": "^14.2.4",
     "husky": "^9.0.11",
     "lint-staged": "^15.2.7",
