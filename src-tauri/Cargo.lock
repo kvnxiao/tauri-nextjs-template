@@ -64,9 +64,9 @@ dependencies = [
 
 [[package]]
 name = "anyhow"
-version = "1.0.87"
+version = "1.0.89"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "10f00e1f6e58a40e807377c75c6a7f97bf9044fab57816f2414e6f5f4499d7b8"
+checksum = "86fdf8605db99b54d3cd748a44c6d04df638eb5dafb219b135d0149bd0db01f6"
 
 [[package]]
 name = "app"
@@ -80,9 +80,9 @@ dependencies = [
 
 [[package]]
 name = "arboard"
-version = "3.4.0"
+version = "3.4.1"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "9fb4009533e8ff8f1450a5bcbc30f4242a1d34442221f72314bea1f5dc9c7f89"
+checksum = "df099ccb16cd014ff054ac1bf392c67feeef57164b05c42f037cd40f5d4357f4"
 dependencies = [
  "clipboard-win",
  "core-graphics 0.23.2",
@@ -177,9 +177,9 @@ dependencies = [
 
 [[package]]
 name = "async-process"
-version = "2.2.3"
+version = "2.3.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "f7eda79bbd84e29c2b308d1dc099d7de8dcc7035e48f4bf5dc4a531a44ff5e2a"
+checksum = "63255f1dc2381611000436537bbedfe83183faa303a5a0edaf191edef06526bb"
 dependencies = [
  "async-channel",
  "async-io",
@@ -192,7 +192,6 @@ dependencies = [
  "futures-lite",
  "rustix",
  "tracing",
- "windows-sys 0.52.0",
 ]
 
 [[package]]
@@ -453,9 +452,9 @@ dependencies = [
 
 [[package]]
 name = "cc"
-version = "1.1.18"
+version = "1.1.19"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "b62ac837cdb5cb22e10a256099b4fc502b1dfe560cb282963a974d7abd80e476"
+checksum = "2d74707dde2ba56f86ae90effb3b43ddd369504387e718014de010cec7959800"
 dependencies = [
  "shlex",
 ]
@@ -965,9 +964,9 @@ dependencies = [
 
 [[package]]
 name = "error-code"
-version = "3.2.0"
+version = "3.3.1"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "a0474425d51df81997e2f90a21591180b38eccf27292d755f3e30750225c175b"
+checksum = "a5d9305ccc6942a704f4335694ecd3de2ea531b114ac2d51f5f843750787a92f"
 
 [[package]]
 name = "event-listener"
@@ -2009,9 +2008,9 @@ checksum = "c41e0c4fef86961ac6d6f8a82609f55f31b05e4fce149ac5710e439df7619ba4"
 
 [[package]]
 name = "mac-notification-sys"
-version = "0.6.1"
+version = "0.6.2"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "51fca4d74ff9dbaac16a01b924bc3693fa2bba0862c2c633abc73f9a8ea21f64"
+checksum = "dce8f34f3717aa37177e723df6c1fc5fb02b2a1087374ea3fe0ea42316dc8f91"
 dependencies = [
  "cc",
  "dirs-next",
@@ -2231,9 +2230,9 @@ dependencies = [
 
 [[package]]
 name = "notify-rust"
-version = "4.11.1"
+version = "4.11.3"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "26a1d03b6305ecefdd9c6c60150179bb8d9f0cd4e64bbcad1e41419e7bf5e414"
+checksum = "5134a72dc570b178bff81b01e81ab14a6fcc015391ed4b3b14853090658cd3a3"
 dependencies = [
  "log",
  "mac-notification-sys",
@@ -2437,9 +2436,9 @@ dependencies = [
 
 [[package]]
 name = "once_cell"
-version = "1.19.0"
+version = "1.20.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "3fdb12b2476b595f9358c5161aa467c2438859caa136dec86c26fdd2efe17b92"
+checksum = "33ea5043e58958ee56f3e15a90aee535795cd7dfd319846288d93c5b57d85cbe"
 
 [[package]]
 name = "open"
@@ -3170,9 +3169,9 @@ dependencies = [
 
 [[package]]
 name = "rustix"
-version = "0.38.36"
+version = "0.38.37"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "3f55e80d50763938498dd5ebb18647174e0c76dc38c5505294bb224624f30f36"
+checksum = "8acb788b847c24f28525660c4d7758620a7210875711f79e7f663cc152726811"
 dependencies = [
  "bitflags 2.5.0",
  "errno",
@@ -3746,9 +3745,9 @@ checksum = "61c41af27dd6d1e27b1b16b489db798443478cef1f06a660c96db617ba5de3b1"
 
 [[package]]
 name = "tauri"
-version = "1.7.2"
+version = "1.8.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "0e33e3ba00a3b05eb6c57ef135781717d33728b48acf914bb05629e74d897d29"
+checksum = "570a20223602ad990a30a048f2fdb957ae3e38de3ca9582e04cc09d01e8ccfad"
 dependencies = [
  "anyhow",
  "bytes",
@@ -3767,6 +3766,7 @@ dependencies = [
  "http",
  "ignore",
  "indexmap 1.9.3",
+ "log",
  "nix 0.26.4",
  "notify-rust",
  "objc",
@@ -3775,6 +3775,7 @@ dependencies = [
  "os_info",
  "os_pipe",
  "percent-encoding",
+ "plist",
  "rand 0.8.5",
  "raw-window-handle",
  "regex",
@@ -3805,9 +3806,9 @@ dependencies = [
 
 [[package]]
 name = "tauri-build"
-version = "1.5.4"
+version = "1.5.5"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "d5fb5a90a64241ddb7217d3210d844149070a911e87e8a107a707a1d4973f164"
+checksum = "586f3e677f940c8bb4f70c52eda05dc59b79e61543f1182de83516810bb8e35d"
 dependencies = [
  "anyhow",
  "cargo_toml",
@@ -4301,9 +4302,9 @@ checksum = "08f95100a766bf4f8f28f90d77e0a5461bbdb219042e7679bebe79004fed8d75"
 
 [[package]]
 name = "unicode-ident"
-version = "1.0.12"
+version = "1.0.13"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "3354b9ac3fae1ff6755cb6db53683adb661634f67557942dea4facebec0fee4b"
+checksum = "e91b56cd4cadaeb79bbf1a5645f6b4f8dc5bde8834ad5894a8db35fda9efa1fe"
 
 [[package]]
 name = "unicode-normalization"
@@ -4316,9 +4317,9 @@ dependencies = [
 
 [[package]]
 name = "unicode-segmentation"
-version = "1.11.0"
+version = "1.12.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "d4c87d22b6e3f4a18d4d40ef354e97c90fcb14dd91d7dc0aa9d8a1172ebf7202"
+checksum = "f6ccf251212114b54433ec949fd6a7841275f9ada20dddd2f29e9ceea4501493"
 
 [[package]]
 name = "url"
