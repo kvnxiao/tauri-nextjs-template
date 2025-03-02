@@ -34,9 +34,9 @@ jobs:
           version: latest
 
       - name: Set up Node.js v22
-        uses: actions/setup-node@v3
+        uses: actions/setup-node@v4
         with:
-          node-version: 22
+          node-version-file: .node-version
           cache: "pnpm"
 
       - name: Install dependencies from lockfile
