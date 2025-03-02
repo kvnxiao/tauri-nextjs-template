@@ -1,24 +1,57 @@
 {
-  "$schema": "https://biomejs.dev/schemas/1.5.3/schema.json",
-  "organizeImports": {
-    "enabled": true
+  "$schema": "https://biomejs.dev/schemas/1.9.4/schema.json",
+  "vcs": {
+    "enabled": false,
+    "clientKind": "git",
+    "useIgnoreFile": false
   },
-  "linter": {
-    "enabled": true,
-    "rules": {
-      "recommended": true
-    }
+  "files": {
+    "ignoreUnknown": false,
+    "ignore": []
   },
   "formatter": {
     "enabled": true,
     "indentStyle": "space",
     "indentWidth": 2
   },
+  "organizeImports": {
+    "enabled": true
+  },
+  "linter": {
+    "enabled": true,
+    "rules": {
+      "recommended": true,
+      "correctness": {
+        "useExhaustiveDependencies": "error",
+        "useHookAtTopLevel": "error"
+      },
+      "a11y": {
+        "noAccessKey": "error"
+      },
+      "nursery": {
+        "useGoogleFontDisplay": "error",
+        "noDocumentImportInPage": "error",
+        "noHeadElement": "error",
+        "noHeadImportInDocument": "error",
+        "noImgElement": "off",
+        "useComponentExportOnlyModules": {
+          "level": "error",
+          "options": {
+            "allowExportNames": ["metadata"]
+          }
+        }
+      }
+    }
+  },
+  "css": {
+    "formatter": {
+      "quoteStyle": "double"
+    }
+  },
   "javascript": {
     "formatter": {
-      "semicolons": "asNeeded",
-      "lineEnding": "lf",
-      "trailingComma": "all"
-    }
+      "quoteStyle": "double"
+    },
+    "globals": []
   }
 }
