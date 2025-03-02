@@ -1,6 +1,6 @@
 # Tauri 2.0 + Next.js 15 App Router Template
 
-![Tauri window screenshot](public/tauri-nextjs-template_screenshot.png)
+![Tauri window screenshot](public/tauri-nextjs-template-2_screenshot.png)
 
 This is a [Tauri](https://v2.tauri.app/) project template using [Next.js](https://nextjs.org/),
 bootstrapped by combining [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app)
