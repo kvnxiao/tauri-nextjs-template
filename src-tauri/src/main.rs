@@ -2,5 +2,5 @@
 #![cfg_attr(not(debug_assertions), windows_subsystem = "windows")]
 
 fn main() {
-    tauri_nextjs_template_2_lib::run()
+    tauri_nextjs_template_lib::run()
 }
