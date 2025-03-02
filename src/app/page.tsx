@@ -39,8 +39,13 @@ export default function Home() {
         </ol>
 
         <div className="flex flex-col gap-2 items-start">
-          <RoundedButton onClick={greet} title="Call &quot;greet&quot; from Rust" />
-          <p className="break-words w-md">{greeted ?? "Click the button to call the Rust function"}</p>
+          <RoundedButton
+            onClick={greet}
+            title="Call &quot;greet&quot; from Rust"
+          />
+          <p className="break-words w-md">
+            {greeted ?? "Click the button to call the Rust function"}
+          </p>
         </div>
       </main>
       <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
