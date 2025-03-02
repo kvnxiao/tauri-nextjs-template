@@ -1,59 +1,40 @@
 {
   "name": "tauri-nextjs-template",
-  "version": "0.1.0",
   "private": true,
-  "author": {
-    "name": "Your Name Here",
-    "email": "your-email-here@example.com"
-  },
+  "version": "0.2.0",
+  "type": "module",
   "scripts": {
-    "next-start": "cross-env BROWSER=none next dev",
-    "next-build": "next build",
-    "tauri": "tauri",
-    "build": "tauri build",
-    "dev": "tauri dev",
+    "dev": "next dev --turbopack",
+    "build": "next build",
+    "start": "next start",
     "lint": "next lint && biome check src/",
-    "prepare": "husky"
+    "tauri": "tauri"
   },
   "dependencies": {
-    "@tauri-apps/api": "^1.6.0",
-    "clsx": "^2.1.1",
-    "next": "^14.2.11",
-    "react": "^18.3.1",
-    "react-dom": "^18.3.1"
+    "@tauri-apps/api": "^2",
+    "@tauri-apps/plugin-opener": "^2.2.6",
+    "next": "^15.2.0",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0"
   },
   "devDependencies": {
-    "@biomejs/biome": "^1.9.1",
-    "@tauri-apps/cli": "^1.6.2",
-    "@testing-library/dom": "^10.4.0",
-    "@testing-library/jest-dom": "^6.5.0",
-    "@testing-library/react": "^16.0.1",
-    "@testing-library/user-event": "^14.5.2",
-    "@types/jest": "^29.5.13",
-    "@types/node": "^22.5.5",
-    "@types/react": "^18.3.6",
-    "@types/react-dom": "^18.3.0",
-    "@typescript-eslint/eslint-plugin": "^8.5.0",
-    "@typescript-eslint/parser": "^8.5.0",
-    "autoprefixer": "^10.4.20",
-    "cross-env": "^7.0.3",
-    "cssnano": "^7.0.6",
-    "eslint": "^8.57.0",
-    "eslint-config-next": "^14.2.11",
-    "husky": "^9.1.6",
-    "lint-staged": "^15.2.10",
-    "postcss": "^8.4.47",
-    "postcss-import": "^16.1.0",
-    "postcss-nesting": "^13.0.0",
-    "tailwindcss": "^3.4.11",
-    "typescript": "^5.6.2"
-  },
-  "browserslist": {
-    "production": [">0.2%", "not dead", "not op_mini all"],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
+    "@biomejs/biome": "^1.9.4",
+    "@eslint/eslintrc": "^3.3.0",
+    "@eslint/js": "^9.21.0",
+    "@next/eslint-plugin-next": "^15.2.0",
+    "@tailwindcss/postcss": "^4.0.9",
+    "@tauri-apps/cli": "^2",
+    "@types/node": "^22.13.8",
+    "@types/react": "^19.0.10",
+    "@types/react-dom": "^19.0.4",
+    "@typescript-eslint/eslint-plugin": "^8.25.0",
+    "@typescript-eslint/parser": "^8.25.0",
+    "@vitejs/plugin-react": "^4.3.4",
+    "eslint": "^9.21.0",
+    "eslint-config-next": "^15.2.0",
+    "eslint-plugin-react-hooks": "^5.2.0",
+    "tailwindcss": "^4.0.9",
+    "typescript": "~5.8.2",
+    "typescript-eslint": "^8.25.0"
   }
 }
