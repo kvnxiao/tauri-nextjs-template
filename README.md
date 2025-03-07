@@ -58,7 +58,7 @@ Windows) to open the web developer console from the Tauri window.
 To export the Next.js frontend via SSG and build the Tauri application for release:
 
 ```shell
-pnpm build
+pnpm tauri build
 ```
 
 ### Source structure
