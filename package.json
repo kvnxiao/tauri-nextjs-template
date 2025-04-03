@@ -7,7 +7,7 @@
     "dev": "next dev --turbopack",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint && biome check src/",
+    "lint": "biome check src/ && next lint",
     "tauri": "tauri"
   },
   "dependencies": {

@@ -22,11 +22,7 @@
     "rules": {
       "recommended": true,
       "correctness": {
-        "useExhaustiveDependencies": "error",
         "useHookAtTopLevel": "error"
-      },
-      "a11y": {
-        "noAccessKey": "error"
       },
       "nursery": {
         "useGoogleFontDisplay": "error",
