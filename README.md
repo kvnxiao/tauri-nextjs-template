@@ -11,20 +11,20 @@ manager, and uses the [App Router](https://nextjs.org/docs/app) model for Next.j
 
 ## Template Features
 
-- TypeScript frontend using [Next.js 15](https://nextjs.org/) React framework
-- [TailwindCSS 4](https://tailwindcss.com/) as a utility-first atomic CSS framework
-  - The example page in this template app has been updated to use only TailwindCSS
-  - While not included by default, consider using
-    [React Aria components](https://react-spectrum.adobe.com/react-aria/index.html)
-    and/or [HeadlessUI components](https://headlessui.com/) for completely unstyled and
-    fully accessible UI components, which integrate nicely with TailwindCSS
-- Opinionated formatting and linting already setup and enabled
-  - [Biome](https://biomejs.dev/) for a combination of fast formatting, linting, and
-    import sorting of TypeScript code, and [ESLint](https://eslint.org/) for any missing
-    Next.js linter rules not covered by Biome
-  - [clippy](https://github.com/rust-lang/rust-clippy) and
-    [rustfmt](https://github.com/rust-lang/rustfmt) for Rust code
-- GitHub Actions to check code formatting and linting for both TypeScript and Rust
+-   TypeScript frontend using [Next.js 15](https://nextjs.org/) React framework
+-   [TailwindCSS 4](https://tailwindcss.com/) as a utility-first atomic CSS framework
+    -   The example page in this template app has been updated to use only TailwindCSS
+    -   While not included by default, consider using
+        [React Aria components](https://react-spectrum.adobe.com/react-aria/index.html)
+        and/or [HeadlessUI components](https://headlessui.com/) for completely unstyled and
+        fully accessible UI components, which integrate nicely with TailwindCSS
+-   Opinionated formatting and linting already setup and enabled
+    -   [Biome](https://biomejs.dev/) for a combination of fast formatting, linting, and
+        import sorting of TypeScript code, and [ESLint](https://eslint.org/) for any missing
+        Next.js linter rules not covered by Biome
+    -   [clippy](https://github.com/rust-lang/rust-clippy) and
+        [rustfmt](https://github.com/rust-lang/rustfmt) for Rust code
+-   GitHub Actions to check code formatting and linting for both TypeScript and Rust
 
 ## Getting Started
 
@@ -35,17 +35,38 @@ After cloning for the first time, change your app identifier inside
 
 ```jsonc
 {
-  // ...
-  // The default "com.tauri.dev" will prevent you from building in release mode
-  "identifier": "com.my-application-name.app",
-  // ...
+    // ...
+    // The default "com.tauri.dev" will prevent you from building in release mode
+    "identifier": "com.my-application-name.app"
+    // ...
 }
+```
+
+Setup pnpm:
+
+```shell
+npm install -g pnpm
+```
+
+Install and init:
+
+```shell
+pnpm install
+pnpm tauri android init
+pnpm tauri ios init
 ```
 
 To develop and run the frontend in a Tauri window:
 
 ```shell
+# For Desktop development, run:
 pnpm tauri dev
+
+# For Android development, run:
+pnpm tauri android dev
+
+# For iOS development, run:
+pnpm tauri ios dev
 ```
 
 This will load the Next.js frontend directly in a Tauri webview window, in addition to
@@ -58,7 +79,14 @@ Windows) to open the web developer console from the Tauri window.
 To export the Next.js frontend via SSG and build the Tauri application for release:
 
 ```shell
+# For Desktop release, run:
 pnpm tauri build
+
+# For Android release, run:
+pnpm tauri android build
+
+# For iOS release, run:
+pnpm tauri ios build
 ```
 
 ### Source structure
@@ -105,11 +133,11 @@ from within a client-side React component, or via [lazy loading](https://nextjs.
 
 To learn more about Next.js, take a look at the following resources:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and
-  API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+-   [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and
+    API.
+-   [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
 
 And to learn more about Tauri, take a look at the following resources:
 
-- [Tauri Documentation - Guides](https://v2.tauri.app/start/) - learn about the Tauri
-  toolkit.
+-   [Tauri Documentation - Guides](https://v2.tauri.app/start/) - learn about the Tauri
+    toolkit.

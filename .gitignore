@@ -37,3 +37,13 @@ yarn-error.log*
 
 # typescript
 *.tsbuildinfo
+
+# tauri
+/src-tauri/gen
+
+# IDE
+/.vscode
+/.idea
+
+# Other
+.DS_Store
