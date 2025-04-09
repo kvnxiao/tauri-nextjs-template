@@ -44,6 +44,3 @@ yarn-error.log*
 # IDE
 /.vscode
 /.idea
-
-# Other
-.DS_Store
