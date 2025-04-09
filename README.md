@@ -42,13 +42,13 @@ After cloning for the first time, change your app identifier inside
 }
 ```
 
-Setup pnpm:
+Install pnpm:
 
 ```shell
 npm install -g pnpm
 ```
 
-Install and init:
+Install and init package:
 
 ```shell
 pnpm install
