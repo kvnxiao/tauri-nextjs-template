@@ -5,7 +5,7 @@ use std::time::{SystemTime, UNIX_EPOCH};
 fn greet() -> String {
   let now = SystemTime::now();
   let epoch_ms = now.duration_since(UNIX_EPOCH).unwrap().as_millis();
-  format!("Hello world from Rust! Current epoch: {}", epoch_ms)
+  format!("Hello world from Rust! Current epoch: {epoch_ms}")
 }
 
 #[cfg_attr(mobile, tauri::mobile_entry_point)]
