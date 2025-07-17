@@ -7,7 +7,9 @@
     "dev": "next dev --turbopack",
     "build": "next build",
     "start": "next start",
-    "lint": "biome check src/ && next lint",
+    "lint": "biome check && next lint",
+    "fix": "biome check --fix && next lint --fix",
+    "test": "vitest",
     "tauri": "tauri"
   },
   "dependencies": {
@@ -18,12 +20,14 @@
     "react-dom": "^19.1.0"
   },
   "devDependencies": {
-    "@biomejs/biome": "^1.9.4",
+    "@biomejs/biome": "^2.1.1",
     "@eslint/eslintrc": "^3.3.1",
     "@eslint/js": "^9.31.0",
     "@next/eslint-plugin-next": "^15.4.1",
     "@tailwindcss/postcss": "^4.1.11",
     "@tauri-apps/cli": "^2.6.2",
+    "@testing-library/dom": "^10.4.0",
+    "@testing-library/react": "^16.3.0",
     "@types/node": "^24.0.14",
     "@types/react": "^19.1.8",
     "@types/react-dom": "^19.1.6",
@@ -33,8 +37,11 @@
     "eslint": "^9.31.0",
     "eslint-config-next": "^15.4.1",
     "eslint-plugin-react-hooks": "^5.2.0",
+    "jsdom": "^26.1.0",
     "tailwindcss": "^4.1.11",
     "typescript": "~5.8.3",
-    "typescript-eslint": "^8.37.0"
+    "typescript-eslint": "^8.37.0",
+    "vite-tsconfig-paths": "^5.1.4",
+    "vitest": "^3.2.4"
   }
 }

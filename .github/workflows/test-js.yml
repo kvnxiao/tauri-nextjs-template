@@ -1,6 +1,4 @@
-# Installs Node.js dependencies and pnpm, and checks formatting + linting
-
-name: Lint Node.js
+name: Run Vitest tests
 
 on:
   push:
@@ -16,15 +14,11 @@ jobs:
     strategy:
       fail-fast: true
       matrix:
-        os: [ubuntu-latest, macos-latest, windows-latest]
+        os: [ubuntu-latest]
 
     runs-on: ${{ matrix.os }}
 
     steps:
-      - name: Disable git core.autocrlf on Windows
-        if: matrix.os == 'windows-latest'
-        run: git config --global core.autocrlf false
-
       - name: Checkout repository code
         uses: actions/checkout@v4
 
@@ -42,5 +36,5 @@ jobs:
       - name: Install dependencies from lockfile
         run: pnpm install --frozen-lockfile
 
-      - name: Run lint step
-        run: pnpm lint
+      - name: Run test step
+        run: pnpm test
