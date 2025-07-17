@@ -26,9 +26,17 @@ jobs:
           PR_URL: ${{ github.event.pull_request.html_url }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: Auto-merge (squash) Dependabot PR
+      - name: Auto-merge (squash) Dependabot PR for non major version updates
         if: ${{ steps.dependabot-metadata.outputs.update-type != 'version-update:semver-major' }}
         run: gh pr merge --auto --squash "$PR_URL"
+        env:
+          PR_URL: ${{ github.event.pull_request.html_url }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Skip auto-merge for major version updates and leave a comment
+        if: ${{ steps.dependabot-metadata.outputs.update-type == 'version-update:semver-major' }}
+        run: |
+          gh pr comment "$PR_URL" --body "Major semver version updates require manual review and cannot be auto-merged."
         env:
           PR_URL: ${{ github.event.pull_request.html_url }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
