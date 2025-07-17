@@ -1,8 +1,8 @@
 "use client";
-import { RoundedButton } from "@/components/RoundedButton";
 import { invoke } from "@tauri-apps/api/core";
 import Image from "next/image";
 import { useCallback, useState } from "react";
+import { RoundedButton } from "@/components/RoundedButton";
 
 export default function Home() {
   const [greeted, setGreeted] = useState<string | null>(null);
