@@ -1,4 +1,4 @@
-# Tauri 2.0 + Next.js 15 App Router Template
+# Tauri 2.0 + Next.js 16 App Router Template
 
 ![Tauri window screenshot](public/tauri-nextjs-template-2_screenshot.png)
 
@@ -11,7 +11,7 @@ manager, and uses the [App Router](https://nextjs.org/docs/app) model for Next.j
 
 ## Template Features
 
-- TypeScript frontend using [Next.js 15](https://nextjs.org/) React framework
+- TypeScript frontend using [Next.js 16](https://nextjs.org/) React framework
 - [TailwindCSS 4](https://tailwindcss.com/) as a utility-first atomic CSS framework
   - The example page in this template app has been updated to use only TailwindCSS
   - While not included by default, consider using
