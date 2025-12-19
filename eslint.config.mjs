@@ -1,16 +1,11 @@
-import { FlatCompat } from "@eslint/eslintrc";
-import eslint from "@eslint/js";
+import { defineConfig, globalIgnores } from "eslint/config";
+import nextVitals from "eslint-config-next/core-web-vitals";
 import tseslint from "typescript-eslint";
 
-const compat = new FlatCompat({
-  baseDirectory: import.meta.dirname,
-});
-
-const eslintConfig = tseslint.config(
-  eslint.configs.recommended,
-  tseslint.configs.strictTypeChecked,
-  tseslint.configs.stylisticTypeChecked,
-  ...compat.extends("next/core-web-vitals"),
+const eslintConfig = defineConfig([
+  ...nextVitals,
+  ...tseslint.configs.strictTypeChecked,
+  ...tseslint.configs.stylisticTypeChecked,
   {
     // Disabled rules taken from https://biomejs.dev/linter/rules-sources for ones that
     // are already handled by Biome
@@ -128,6 +123,17 @@ const eslintConfig = tseslint.config(
       },
     },
   },
-);
+  // Override default ignores of eslint-config-next.
+  globalIgnores([
+    ".next/**",
+    "node_modules/**",
+    "dist/**",
+    "out/**",
+    "public/**",
+    "build/**",
+    "next-env.d.ts",
+    "src-tauri/**",
+  ]),
+]);
 
 export default eslintConfig;
