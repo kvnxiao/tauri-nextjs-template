@@ -58,9 +58,7 @@
         "useComponentExportOnlyModules": {
           "level": "error",
           "options": {
-            "allowExportNames": [
-              "metadata"
-            ]
+            "allowExportNames": ["metadata"]
           }
         }
       },
