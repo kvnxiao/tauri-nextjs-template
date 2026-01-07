@@ -20,8 +20,7 @@ manager, and uses the [App Router](https://nextjs.org/docs/app) model for Next.j
     fully accessible UI components, which integrate nicely with TailwindCSS
 - Opinionated formatting and linting already setup and enabled
   - [Biome](https://biomejs.dev/) for a combination of fast formatting, linting, and
-    import sorting of TypeScript code, and [ESLint](https://eslint.org/) for any missing
-    Next.js linter rules not covered by Biome
+    import sorting of TypeScript code
   - [clippy](https://github.com/rust-lang/rust-clippy) and
     [rustfmt](https://github.com/rust-lang/rustfmt) for Rust code
 - GitHub Actions to check code formatting and linting for both TypeScript and Rust
