@@ -1,16 +1,19 @@
 {
   "name": "tauri-nextjs-template",
   "private": true,
-  "version": "0.2.0",
+  "version": "0.3.0",
   "type": "module",
+  "packageManager": "pnpm@10.27.0",
   "scripts": {
-    "dev": "next dev --turbopack",
-    "build": "next build",
-    "start": "next start",
-    "lint": "biome check && eslint .",
-    "fix": "biome check --fix && eslint . --fix",
-    "test": "vitest",
-    "tauri": "tauri"
+    "dev:next": "next dev --turbopack",
+    "build:next": "next build",
+    "test": "vitest run",
+    "tauri": "tauri",
+    "format": "biome format",
+    "lint": "biome check",
+    "fix": "biome check --write",
+    "dev": "tauri dev",
+    "build": "tauri build"
   },
   "dependencies": {
     "@tauri-apps/api": "^2.9.1",
@@ -21,9 +24,6 @@
   },
   "devDependencies": {
     "@biomejs/biome": "^2.3.11",
-    "@eslint/eslintrc": "^3.3.3",
-    "@eslint/js": "^9.39.2",
-    "@next/eslint-plugin-next": "^16.1.1",
     "@tailwindcss/postcss": "^4.1.18",
     "@tauri-apps/cli": "^2.9.6",
     "@testing-library/dom": "^10.4.1",
@@ -31,16 +31,10 @@
     "@types/node": "^25.0.3",
     "@types/react": "^19.2.7",
     "@types/react-dom": "^19.2.3",
-    "@typescript-eslint/eslint-plugin": "^8.51.0",
-    "@typescript-eslint/parser": "^8.51.0",
     "@vitejs/plugin-react": "^5.1.2",
-    "eslint": "^9.39.2",
-    "eslint-config-next": "^16.1.1",
-    "eslint-plugin-react-hooks": "^7.0.1",
     "jsdom": "^27.4.0",
     "tailwindcss": "^4.1.18",
     "typescript": "~5.9.3",
-    "typescript-eslint": "^8.51.0",
     "vite-tsconfig-paths": "^6.0.3",
     "vitest": "^4.0.16"
   }

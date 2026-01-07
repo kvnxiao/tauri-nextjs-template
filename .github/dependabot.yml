@@ -11,9 +11,6 @@ updates:
       all:
         patterns:
           - "*"
-    ignore:
-      - dependency-name: "eslint"
-        versions: ">= 9"
 
   # Enable version updates for rust
   - package-ecosystem: "cargo"
