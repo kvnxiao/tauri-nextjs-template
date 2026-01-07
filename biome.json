@@ -45,7 +45,8 @@
         "useImportExtensions": "off"
       },
       "nursery": {
-        "noFloatingPromises": "error"
+        "noFloatingPromises": "error",
+        "useAwaitThenable": "error"
       },
       "suspicious": {
         "useGoogleFontDisplay": "error",
@@ -57,7 +58,9 @@
         "useComponentExportOnlyModules": {
           "level": "error",
           "options": {
-            "allowExportNames": ["metadata"]
+            "allowExportNames": [
+              "metadata"
+            ]
           }
         }
       },
