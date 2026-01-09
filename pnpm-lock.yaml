@@ -12,8 +12,8 @@ importers:
         specifier: ^2.9.1
         version: 2.9.1
       '@tauri-apps/plugin-opener':
-        specifier: ^2.5.2
-        version: 2.5.2
+        specifier: ^2.5.3
+        version: 2.5.3
       next:
         specifier: ^16.1.1
         version: 16.1.1(@babel/core@7.28.5)(react-dom@19.2.3(react@19.2.3))(react@19.2.3)
@@ -50,7 +50,7 @@ importers:
         version: 19.2.3(@types/react@19.2.7)
       '@vitejs/plugin-react':
         specifier: ^5.1.2
-        version: 5.1.2(vite@7.3.0(@types/node@25.0.3)(jiti@2.6.1)(lightningcss@1.30.2))
+        version: 5.1.2(vite@7.3.1(@types/node@25.0.3)(jiti@2.6.1)(lightningcss@1.30.2))
       jsdom:
         specifier: ^27.4.0
         version: 27.4.0
@@ -62,7 +62,7 @@ importers:
         version: 5.9.3
       vite-tsconfig-paths:
         specifier: ^6.0.3
-        version: 6.0.3(typescript@5.9.3)(vite@7.3.0(@types/node@25.0.3)(jiti@2.6.1)(lightningcss@1.30.2))
+        version: 6.0.3(typescript@5.9.3)(vite@7.3.1(@types/node@25.0.3)(jiti@2.6.1)(lightningcss@1.30.2))
       vitest:
         specifier: ^4.0.16
         version: 4.0.16(@types/node@25.0.3)(jiti@2.6.1)(jsdom@27.4.0)(lightningcss@1.30.2)
@@ -249,8 +249,8 @@ packages:
     peerDependencies:
       '@csstools/css-tokenizer': ^3.0.4
 
-  '@csstools/css-syntax-patches-for-csstree@1.0.22':
-    resolution: {integrity: sha512-qBcx6zYlhleiFfdtzkRgwNC7VVoAwfK76Vmsw5t+PbvtdknO9StgRk7ROvq9so1iqbdW4uLIDAsXRsTfUrIoOw==}
+  '@csstools/css-syntax-patches-for-csstree@1.0.23':
+    resolution: {integrity: sha512-YEmgyklR6l/oKUltidNVYdjSmLSW88vMsKx0pmiS3r71s8ZZRpd8A0Yf0U+6p/RzElmMnPBv27hNWjDQMSZRtQ==}
     engines: {node: '>=18'}
 
   '@csstools/css-tokenizer@3.0.4':
@@ -925,8 +925,8 @@ packages:
     engines: {node: '>= 10'}
     hasBin: true
 
-  '@tauri-apps/plugin-opener@2.5.2':
-    resolution: {integrity: sha512-ei/yRRoCklWHImwpCcDK3VhNXx+QXM9793aQ64YxpqVF0BDuuIlXhZgiAkc15wnPVav+IbkYhmDJIv5R326Mew==}
+  '@tauri-apps/plugin-opener@2.5.3':
+    resolution: {integrity: sha512-CCcUltXMOfUEArbf3db3kCE7Ggy1ExBEBl51Ko2ODJ6GDYHRp1nSNlQm5uNCFY5k7/ufaK5Ib3Du/Zir19IYQQ==}
 
   '@testing-library/dom@10.4.1':
     resolution: {integrity: sha512-o4PXJQidqJl82ckFaXUeoAW+XysPLauYI43Abki5hABd853iMhitooc6znOnczgbTYmEP6U6/y1ZyKAIsvMKGg==}
@@ -1036,8 +1036,8 @@ packages:
     resolution: {integrity: sha512-Izi8RQcffqCeNVgFigKli1ssklIbpHnCYc6AknXGYoB6grJqyeby7jv12JUQgmTAnIDnbck1uxksT4dzN3PWBA==}
     engines: {node: '>=12'}
 
-  baseline-browser-mapping@2.9.11:
-    resolution: {integrity: sha512-Sg0xJUNDU1sJNGdfGWhVHX0kkZ+HWcvmVymJbj6NSgZZmW/8S9Y2HQ5euytnIgakgxN6papOAWiwDo1ctFDcoQ==}
+  baseline-browser-mapping@2.9.13:
+    resolution: {integrity: sha512-WhtvB2NG2wjr04+h77sg3klAIwrgOqnjS49GGudnUPGFFgg7G17y7Qecqp+2Dr5kUDxNRBca0SK7cG8JwzkWDQ==}
     hasBin: true
 
   bidi-js@1.0.3:
@@ -1048,8 +1048,8 @@ packages:
     engines: {node: ^6 || ^7 || ^8 || ^9 || ^10 || ^11 || ^12 || >=13.7}
     hasBin: true
 
-  caniuse-lite@1.0.30001762:
-    resolution: {integrity: sha512-PxZwGNvH7Ak8WX5iXzoK1KPZttBXNPuaOvI2ZYU7NrlM+d9Ov+TUvlLOBNGzVXAntMSMMlJPd+jY6ovrVjSmUw==}
+  caniuse-lite@1.0.30001763:
+    resolution: {integrity: sha512-mh/dGtq56uN98LlNX9qdbKnzINhX0QzhiWBFEkFfsFO4QyCvL8YegrJAazCwXIeqkIob8BlZPGM3xdnY+sgmvQ==}
 
   chai@6.2.2:
     resolution: {integrity: sha512-NUPRluOfOiTKBKvWPtSD4PhFvWCqOi0BGStNWs57X9js7XGTprSmFoz5F0tWhR4WPjNeR9jXqdC7/UpSJTnlRg==}
@@ -1491,8 +1491,8 @@ packages:
       vite:
         optional: true
 
-  vite@7.3.0:
-    resolution: {integrity: sha512-dZwN5L1VlUBewiP6H9s2+B3e3Jg96D0vzN+Ry73sOefebhYr9f94wwkMNN/9ouoU8pV1BqA1d1zGk8928cx0rg==}
+  vite@7.3.1:
+    resolution: {integrity: sha512-w+N7Hifpc3gRjZ63vYBXA56dvvRlNWRczTdmCBBa+CotUzAPf5b7YMdMR/8CQoeYE5LX3W4wj6RYTgonm1b9DA==}
     engines: {node: ^20.19.0 || >=22.12.0}
     hasBin: true
     peerDependencies:
@@ -1799,7 +1799,7 @@ snapshots:
     dependencies:
       '@csstools/css-tokenizer': 3.0.4
 
-  '@csstools/css-syntax-patches-for-csstree@1.0.22': {}
+  '@csstools/css-syntax-patches-for-csstree@1.0.23': {}
 
   '@csstools/css-tokenizer@3.0.4': {}
 
@@ -2231,7 +2231,7 @@ snapshots:
       '@tauri-apps/cli-win32-ia32-msvc': 2.9.6
       '@tauri-apps/cli-win32-x64-msvc': 2.9.6
 
-  '@tauri-apps/plugin-opener@2.5.2':
+  '@tauri-apps/plugin-opener@2.5.3':
     dependencies:
       '@tauri-apps/api': 2.9.1
 
@@ -2300,7 +2300,7 @@ snapshots:
     dependencies:
       csstype: 3.2.3
 
-  '@vitejs/plugin-react@5.1.2(vite@7.3.0(@types/node@25.0.3)(jiti@2.6.1)(lightningcss@1.30.2))':
+  '@vitejs/plugin-react@5.1.2(vite@7.3.1(@types/node@25.0.3)(jiti@2.6.1)(lightningcss@1.30.2))':
     dependencies:
       '@babel/core': 7.28.5
       '@babel/plugin-transform-react-jsx-self': 7.27.1(@babel/core@7.28.5)
@@ -2308,7 +2308,7 @@ snapshots:
       '@rolldown/pluginutils': 1.0.0-beta.53
       '@types/babel__core': 7.20.5
       react-refresh: 0.18.0
-      vite: 7.3.0(@types/node@25.0.3)(jiti@2.6.1)(lightningcss@1.30.2)
+      vite: 7.3.1(@types/node@25.0.3)(jiti@2.6.1)(lightningcss@1.30.2)
     transitivePeerDependencies:
       - supports-color
 
@@ -2321,13 +2321,13 @@ snapshots:
       chai: 6.2.2
       tinyrainbow: 3.0.3
 
-  '@vitest/mocker@4.0.16(vite@7.3.0(@types/node@25.0.3)(jiti@2.6.1)(lightningcss@1.30.2))':
+  '@vitest/mocker@4.0.16(vite@7.3.1(@types/node@25.0.3)(jiti@2.6.1)(lightningcss@1.30.2))':
     dependencies:
       '@vitest/spy': 4.0.16
       estree-walker: 3.0.3
       magic-string: 0.30.21
     optionalDependencies:
-      vite: 7.3.0(@types/node@25.0.3)(jiti@2.6.1)(lightningcss@1.30.2)
+      vite: 7.3.1(@types/node@25.0.3)(jiti@2.6.1)(lightningcss@1.30.2)
 
   '@vitest/pretty-format@4.0.16':
     dependencies:
@@ -2363,7 +2363,7 @@ snapshots:
 
   assertion-error@2.0.1: {}
 
-  baseline-browser-mapping@2.9.11: {}
+  baseline-browser-mapping@2.9.13: {}
 
   bidi-js@1.0.3:
     dependencies:
@@ -2371,13 +2371,13 @@ snapshots:
 
   browserslist@4.28.1:
     dependencies:
-      baseline-browser-mapping: 2.9.11
-      caniuse-lite: 1.0.30001762
+      baseline-browser-mapping: 2.9.13
+      caniuse-lite: 1.0.30001763
       electron-to-chromium: 1.5.267
       node-releases: 2.0.27
       update-browserslist-db: 1.2.3(browserslist@4.28.1)
 
-  caniuse-lite@1.0.30001762: {}
+  caniuse-lite@1.0.30001763: {}
 
   chai@6.2.2: {}
 
@@ -2393,7 +2393,7 @@ snapshots:
   cssstyle@5.3.7:
     dependencies:
       '@asamuzakjp/css-color': 4.1.1
-      '@csstools/css-syntax-patches-for-csstree': 1.0.22
+      '@csstools/css-syntax-patches-for-csstree': 1.0.23
       css-tree: 3.1.0
       lru-cache: 11.2.4
 
@@ -2606,8 +2606,8 @@ snapshots:
     dependencies:
       '@next/env': 16.1.1
       '@swc/helpers': 0.5.15
-      baseline-browser-mapping: 2.9.11
-      caniuse-lite: 1.0.30001762
+      baseline-browser-mapping: 2.9.13
+      caniuse-lite: 1.0.30001763
       postcss: 8.4.31
       react: 19.2.3
       react-dom: 19.2.3(react@19.2.3)
@@ -2809,18 +2809,18 @@ snapshots:
       escalade: 3.2.0
       picocolors: 1.1.1
 
-  vite-tsconfig-paths@6.0.3(typescript@5.9.3)(vite@7.3.0(@types/node@25.0.3)(jiti@2.6.1)(lightningcss@1.30.2)):
+  vite-tsconfig-paths@6.0.3(typescript@5.9.3)(vite@7.3.1(@types/node@25.0.3)(jiti@2.6.1)(lightningcss@1.30.2)):
     dependencies:
       debug: 4.4.3
       globrex: 0.1.2
       tsconfck: 3.1.6(typescript@5.9.3)
     optionalDependencies:
-      vite: 7.3.0(@types/node@25.0.3)(jiti@2.6.1)(lightningcss@1.30.2)
+      vite: 7.3.1(@types/node@25.0.3)(jiti@2.6.1)(lightningcss@1.30.2)
     transitivePeerDependencies:
       - supports-color
       - typescript
 
-  vite@7.3.0(@types/node@25.0.3)(jiti@2.6.1)(lightningcss@1.30.2):
+  vite@7.3.1(@types/node@25.0.3)(jiti@2.6.1)(lightningcss@1.30.2):
     dependencies:
       esbuild: 0.27.2
       fdir: 6.5.0(picomatch@4.0.3)
@@ -2837,7 +2837,7 @@ snapshots:
   vitest@4.0.16(@types/node@25.0.3)(jiti@2.6.1)(jsdom@27.4.0)(lightningcss@1.30.2):
     dependencies:
       '@vitest/expect': 4.0.16
-      '@vitest/mocker': 4.0.16(vite@7.3.0(@types/node@25.0.3)(jiti@2.6.1)(lightningcss@1.30.2))
+      '@vitest/mocker': 4.0.16(vite@7.3.1(@types/node@25.0.3)(jiti@2.6.1)(lightningcss@1.30.2))
       '@vitest/pretty-format': 4.0.16
       '@vitest/runner': 4.0.16
       '@vitest/snapshot': 4.0.16
@@ -2854,7 +2854,7 @@ snapshots:
       tinyexec: 1.0.2
       tinyglobby: 0.2.15
       tinyrainbow: 3.0.3
-      vite: 7.3.0(@types/node@25.0.3)(jiti@2.6.1)(lightningcss@1.30.2)
+      vite: 7.3.1(@types/node@25.0.3)(jiti@2.6.1)(lightningcss@1.30.2)
       why-is-node-running: 2.3.0
     optionalDependencies:
       '@types/node': 25.0.3
