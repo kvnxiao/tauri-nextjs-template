@@ -2,6 +2,9 @@
 
 name: Frontend tests
 
+permissions:
+  contents: read
+
 on:
   push:
     branches:
