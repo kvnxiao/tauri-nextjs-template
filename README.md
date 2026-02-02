@@ -1,5 +1,9 @@
 # Tauri 2.0 + Next.js 16 App Router Template
 
+>[!IMPORTANT]
+> Next.js is typically overkill for the frontend of a Tauri application.
+> I'd personally recommend checking out https://github.com/kvnxiao/tauri-tanstack-start-react-template first.
+
 ![Tauri window screenshot](public/tauri-nextjs-template-2_screenshot.png)
 
 This is a [Tauri](https://v2.tauri.app/) project template using [Next.js](https://nextjs.org/),
