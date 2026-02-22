@@ -41,6 +41,7 @@
     "rules": {
       "recommended": true,
       "correctness": {
+        "noUnresolvedImports": "off",
         "useHookAtTopLevel": "error",
         "useImportExtensions": "off"
       },
