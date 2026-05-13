@@ -16,26 +16,26 @@
     "build": "tauri build"
   },
   "dependencies": {
-    "@tauri-apps/api": "^2.10.1",
-    "@tauri-apps/plugin-opener": "^2.5.3",
+    "@tauri-apps/api": "^2.11.0",
+    "@tauri-apps/plugin-opener": "^2.5.4",
     "next": "^16.2.6",
-    "react": "^19.2.4",
-    "react-dom": "^19.2.4"
+    "react": "^19.2.6",
+    "react-dom": "^19.2.6"
   },
   "devDependencies": {
-    "@biomejs/biome": "^2.4.6",
-    "@tailwindcss/postcss": "^4.2.1",
-    "@tauri-apps/cli": "^2.10.1",
+    "@biomejs/biome": "^2.4.15",
+    "@tailwindcss/postcss": "^4.3.0",
+    "@tauri-apps/cli": "^2.11.1",
     "@testing-library/dom": "^10.4.1",
     "@testing-library/react": "^16.3.2",
-    "@types/node": "^25.3.5",
+    "@types/node": "^25.7.0",
     "@types/react": "^19.2.14",
     "@types/react-dom": "^19.2.3",
-    "@vitejs/plugin-react": "^5.1.4",
-    "jsdom": "^28.1.0",
-    "tailwindcss": "^4.2.1",
-    "typescript": "~5.9.3",
+    "@vitejs/plugin-react": "^6.0.1",
+    "jsdom": "^29.1.1",
+    "tailwindcss": "^4.3.0",
+    "typescript": "~6.0.3",
     "vite-tsconfig-paths": "^6.1.1",
-    "vitest": "^4.0.18"
+    "vitest": "^4.1.6"
   }
 }
