@@ -39,7 +39,7 @@
       "next": "all"
     },
     "rules": {
-      "recommended": true,
+      "preset": "recommended",
       "correctness": {
         "noUnresolvedImports": "off",
         "useHookAtTopLevel": "error",
