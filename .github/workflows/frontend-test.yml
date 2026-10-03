@@ -26,13 +26,13 @@ jobs:
 
     steps:
       - name: Checkout repository code
-        uses: actions/checkout@v5
+        uses: actions/checkout@v7
 
       - name: Set up pnpm package manager
-        uses: pnpm/action-setup@v4
+        uses: pnpm/action-setup@v6
 
       - name: Set up Node.js
-        uses: actions/setup-node@v6
+        uses: actions/setup-node@v7
         with:
           node-version-file: .node-version
           cache: "pnpm"
