@@ -5,6 +5,9 @@ updates:
     directory: "/"
     schedule:
       interval: "weekly"
+    # Matches pnpm's default minimumReleaseAge of 1 day, which rejects newer lockfile entries
+    cooldown:
+      default-days: 1
     allow:
       - dependency-type: "all"
     groups:
